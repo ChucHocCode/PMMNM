@@ -10,8 +10,8 @@ define('DB_PASSWORD', '');     // XAMPP thường để trống
 define('DB_HOST', 'localhost');
 
 /** Charset */
-define('DB_CHARSET', 'utf8mb4');
-define('DB_COLLATE', '');
+define('DB_CHARSET', 'http://localhost:8888/BTL');
+define('DB_COLLATE', 'http://localhost:8888/BTL');
 
 
 /** ================= SECURITY KEYS ================= */
@@ -34,10 +34,6 @@ $table_prefix = 'wp_';
 define('WP_DEBUG', false);
 
 
-/** ================= URL LOCALHOST ================= */
-/* QUAN TRỌNG: port 8888 */
-define('WP_HOME', 'http://localhost:8888/BTL');
-define('WP_SITEURL', 'http://localhost:8888/BTL');
 
 define('FORCE_SSL_ADMIN', false);
 
