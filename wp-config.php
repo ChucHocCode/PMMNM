@@ -10,8 +10,8 @@ define('DB_PASSWORD', '');     // XAMPP thường để trống
 define('DB_HOST', '127.0.0.1');
 
 /** Charset */
-define('DB_CHARSET', 'utf8mb4');
-define('DB_COLLATE', '');
+define('DB_CHARSET', 'http://localhost:8888/BTL');
+define('DB_COLLATE', 'http://localhost:8888/BTL');
 
 
 /** ================= SECURITY KEYS ================= */
