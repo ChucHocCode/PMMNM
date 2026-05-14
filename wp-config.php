@@ -7,7 +7,7 @@
 define('DB_NAME', 'btl_db');      // Database đã tạo trong phpMyAdmin
 define('DB_USER', 'root');     // XAMPP mặc định
 define('DB_PASSWORD', '');     // XAMPP thường để trống
-define('DB_HOST', 'localhost');
+define('DB_HOST', '127.0.0.1');
 
 /** Charset */
 define('DB_CHARSET', 'utf8mb4');
@@ -29,6 +29,11 @@ define('NONCE_SALT',       'btl-nonce-salt-123456');
 /** ================= TABLE PREFIX ================= */
 $table_prefix = 'wp_';
 
+
+/** ================= URL OVERRIDE ================= */
+// Dùng 127.0.0.1 để tránh lỗi DNS resolution trên XAMPP Windows
+define('WP_HOME',    'http://127.0.0.1/PMMNM');
+define('WP_SITEURL', 'http://127.0.0.1/PMMNM');
 
 /** ================= DEBUG ================= */
 define('WP_DEBUG', false);
