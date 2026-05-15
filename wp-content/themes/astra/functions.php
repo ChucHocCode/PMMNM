@@ -212,3 +212,24 @@ require_once ASTRA_THEME_DIR . 'inc/abilities/bootstrap.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-filters.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-hooks.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-functions.php';
+
+add_action(
+	'wp_enqueue_scripts',
+	function() {
+		$full_width_css = '
+.site-content > .ast-container,
+.ast-page-builder-template .site-content > .ast-container,
+.woocommerce .site-content > .ast-container,
+.woocommerce-page .site-content > .ast-container,
+.ast-woocommerce-container {
+	max-width: 100% !important;
+	width: 100% !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+';
+
+		wp_add_inline_style( 'astra-theme-css', $full_width_css );
+	},
+	99
+);
